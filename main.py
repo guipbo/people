@@ -10,6 +10,7 @@ app = FastAPI()
 
 class People(BaseModel):
     id: int
+    name: str
     cpf: str
     email: str
     phone: str
@@ -17,8 +18,10 @@ class People(BaseModel):
 
 # Database
 _data = [
-    People(id=1, cpf="cpf", email="email", phone="phone"),
-    People(id=2, cpf="cpf", email="email", phone="phone")
+    People(id=1, name="Joaquim Davi", cpf="45699376240",
+           email="joaquimdavi@lphbrasil.com.br", phone="9526674850"),
+    People(id=2, name="Milena Jennifer",
+           cpf="66628936171", email="milenajennifer@almaquinas.com.br", phone="95998233338")
 ]
 
 # API
